@@ -1,5 +1,5 @@
 import hardWood from '../assets/wood-images/hard-wood.jpeg';
-import sangwanWood from '..sagwan-wood.jpg';
+import sangwanWood from '../assets/wood-images/sagwan-wood.jpg';
 import teakWood from '../assets/wood-images/teak-wood.jpeg'
 import timberWood from '../assets/wood-images/timber-wood.jpg';
 import pineWood from '../assets/wood-images/pine-wood.jpg';
