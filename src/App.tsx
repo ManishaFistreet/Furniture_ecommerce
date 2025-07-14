@@ -23,7 +23,6 @@ const App = () => {
               <CollectionGrid />
               <ProductGrid />
               <ExploreWoodsSection />
-              <Footer />
             </>
           }
         />
@@ -31,6 +30,7 @@ const App = () => {
         {/* Dynamic Collection Page */}
         <Route path="/collection/:name" element={<Collection />} />
       </Routes>
+      <Footer />
       </>
     
   );

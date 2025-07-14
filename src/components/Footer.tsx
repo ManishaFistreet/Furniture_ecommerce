@@ -1,10 +1,33 @@
+import { useState, useEffect } from "react";
 import hex1 from "../assets/images/footer/hex1.jpg";
 import hex2 from "../assets/images/footer/hex2.jpg";
 import hex3 from "../assets/images/footer/hex3.webp";
 
 const Footer = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const checkScroll = () => {
+      if (!showScroll && window.pageYOffset > 300) {
+        setShowScroll(true);
+      } else if (showScroll && window.pageYOffset <= 300) {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", checkScroll);
+    return () => window.removeEventListener("scroll", checkScroll);
+  }, [showScroll]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <footer className="bg-[#f7f7f7] text-gray-800 pt-12 border-t border-gray-200">
+    <footer className="bg-[#f7f7f7] text-gray-800 pt-12 border-t border-gray-200 relative">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-15">
         {/* Section 1: Logo & Services */}
         <div className="space-y-4">
@@ -54,9 +77,20 @@ const Footer = () => {
       </div>
 
       {/* Bottom line */}
-      <div className="text-center text-xs text-gray-500 mt-10 border-t pt-4">
+      <div className="text-center text-xs text-gray-500 mt-10 border-t pt-4 pb-4">
         © {new Date().getFullYear()} Radhika Industries. All rights reserved.
       </div>
+
+      {/* Scroll to top button */}
+      {showScroll && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 text-white rounded-full shadow-lg cursor-pointer transition-all duration-300 focus:outline-none"
+          aria-label="Scroll to top"
+        >
+          <img width="48" height="48" src="https://img.icons8.com/deco-color/48/circled-up-2.png" alt="circled-up-2" />
+        </button>
+      )}
     </footer>
   );
 };

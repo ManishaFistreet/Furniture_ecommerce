@@ -20,6 +20,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'font-1': ['Inter', 'sans-serif'],
+      },
       colors: {
         brand: "#527FA4",        // Muted Blue (Primary)
         accent: "#BD9A52",       // Warm Gold (Accent)
@@ -165,6 +168,5 @@ module.exports = {
         gridTemplateColumns: ['responsive', 'group-hover'], // Example variant      
       }
     },
-
   },
 }
