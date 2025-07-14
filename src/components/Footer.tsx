@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import hex1 from "../assets/images/footer/hex1.jpg";
 import hex2 from "../assets/images/footer/hex2.jpg";
 import hex3 from "../assets/images/footer/hex3.webp";
-
+import arrow from "../assets/images/footer/circled-up.svg"
 const Footer = () => {
   const [showScroll, setShowScroll] = useState(false);
 
@@ -83,12 +83,16 @@ const Footer = () => {
 
       {/* Scroll to top button */}
       {showScroll && (
-        <button
+       <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 text-white rounded-full shadow-lg cursor-pointer transition-all duration-300 focus:outline-none"
+          className="fixed bottom-6 right-6 p-2 rounded-full transition-all duration-300 focus:outline-none border-none z-50 bg-transparent hover:bg-gray-100/30"
           aria-label="Scroll to top"
         >
-          <img width="48" height="48" src="https://img.icons8.com/deco-color/48/circled-up-2.png" alt="circled-up-2" />
+          <img 
+            src={arrow} 
+            alt="Scroll to top" 
+            className="w-8 h-8 border-none" 
+          />
         </button>
       )}
     </footer>
