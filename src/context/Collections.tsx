@@ -48,7 +48,7 @@ const allProducts: Record<string, {
       name: "Modern Book Shelf",
       image: modern,
       price: 4999,
-      
+
     },
     {
       name: "Wooden Book Rack",
@@ -90,164 +90,164 @@ const allProducts: Record<string, {
       price: 2999,
     },
   ],
-  "benches":[
+  "benches": [
     {
       name: "Classic Wooden Bench",
       image: bench1,
       price: 1999,
     },
     {
-         name: "Modern Bench",
+      name: "Modern Bench",
       image: bench2,
       price: 999,
     },
-     {
-         name: "Vintage Bench",
+    {
+      name: "Vintage Bench",
       image: bench3,
       price: 3999,
     },
-      {
-         name: "Urban Wooden Bench",
+    {
+      name: "Urban Wooden Bench",
       image: bench4,
       price: 4999,
     },
-      {
-         name: "Kaba Upholestered Bench",
+    {
+      name: "Kaba Upholestered Bench",
       image: bench5,
       price: 5999,
     }
   ],
- "coffee-tables": [
+  "coffee-tables": [
     {
-  name: "Rustic Charm Coffee Table",
-      image:ct1,
+      name: "Rustic Charm Coffee Table",
+      image: ct1,
       price: 7999,
     },
-     {
-  name: "Arvo Round Center Table",
+    {
+      name: "Arvo Round Center Table",
       image: ct2,
       price: 9999,
     },
-     {
-  name: "Halo Oval Table",
+    {
+      name: "Halo Oval Table",
       image: ct3,
       price: 6999,
     },
-     {
-  name: "Reclaimed Timber Table",
+    {
+      name: "Reclaimed Timber Table",
       image: ct4,
       price: 8999,
     },
-     {
-  name: "UrbanNest Coffee Table",
+    {
+      name: "UrbanNest Coffee Table",
       image: ct5,
       price: 10999,
     }
   ],
-  "console-tables":[
-     {
-  name: "Nova Slim Console",
-      image:console1,
+  "console-tables": [
+    {
+      name: "Nova Slim Console",
+      image: console1,
       price: 7999,
     },
-     {
-  name: "Driftwood Console Table",
+    {
+      name: "Driftwood Console Table",
       image: console2,
       price: 9999,
     },
-     {
-  name: "Woodcraft Console",
+    {
+      name: "Woodcraft Console",
       image: console3,
       price: 6999,
     },
-     {
-  name: "Rustic Grove Console",
+    {
+      name: "Rustic Grove Console",
       image: console4,
       price: 9999,
     },
-     {
-  name: "Vintage Console",
+    {
+      name: "Vintage Console",
       image: console5,
       price: 12999,
     }
   ],
-    "lounge-chairs":[
-     {
-  name: "TimberNest Lounge Chair",
-      image:lg1,
+  "lounge-chairs": [
+    {
+      name: "TimberNest Lounge Chair",
+      image: lg1,
       price: 7999,
     },
-     {
-  name: "RusticCharm Armchair",
+    {
+      name: "RusticCharm Armchair",
       image: lg2,
       price: 9999,
     },
-     {
-  name: "Woodcraft Lounge Chair",
+    {
+      name: "Woodcraft Lounge Chair",
       image: lg3,
       price: 6999,
     },
-     {
-  name: "Halo Mid-Century Chair",
+    {
+      name: "Halo Mid-Century Chair",
       image: lg4,
       price: 9999,
     },
-     {
-  name: "Vintage Lounge Chair",
+    {
+      name: "Vintage Lounge Chair",
       image: lg5,
       price: 12999,
     }
   ],
-   "poufs":[
-     {
-  name: "TimberNest Pouf",
-      image:pf1,
+  "poufs": [
+    {
+      name: "TimberNest Pouf",
+      image: pf1,
       price: 7999,
     },
-     {
-  name: "RusticCharm Pouf",
+    {
+      name: "RusticCharm Pouf",
       image: pf2,
       price: 9999,
     },
-     {
-  name: "Woodcraft Lounge Pouf",
+    {
+      name: "Woodcraft Lounge Pouf",
       image: pf3,
       price: 6999,
     },
-     {
-  name: "Halo Mid-Century Pouf",
+    {
+      name: "Halo Mid-Century Pouf",
       image: pf4,
       price: 9999,
     },
-     {
-  name: "Vintage Lounge Pouf",
+    {
+      name: "Vintage Lounge Pouf",
       image: pf5,
       price: 12999,
     }
   ],
-   "side-tables":[
-     {
-  name: "TimberNest Side-Table",
-      image:st1,
+  "side-tables": [
+    {
+      name: "TimberNest Side-Table",
+      image: st1,
       price: 7999,
     },
-     {
-  name: "RusticCharm Side-Table",
+    {
+      name: "RusticCharm Side-Table",
       image: st2,
       price: 9999,
     },
-     {
-  name: "Woodcraft Lounge Side-Table",
+    {
+      name: "Woodcraft Lounge Side-Table",
       image: st3,
       price: 6999,
     },
-     {
-  name: "Halo Mid-Century Side-Table",
+    {
+      name: "Halo Mid-Century Side-Table",
       image: st4,
       price: 9999,
     },
-     {
-  name: "Vintage Lounge Side-Table",
+    {
+      name: "Vintage Lounge Side-Table",
       image: st5,
       price: 12999,
     }
@@ -274,7 +274,7 @@ const Collection = () => {
           {products.map((product, idx) => (
             <ProductCard
               key={idx}
-             name={product.name}
+              name={product.name}
               image={product.image}
               price={product.price}
               oldPrice={product.oldPrice}

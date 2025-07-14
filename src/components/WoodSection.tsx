@@ -40,7 +40,7 @@ const ExploreWoodsSection = () => {
               key={i}
               src={wood.src}
               alt={wood.alt}
-              className={`h-36 object-cover w-full rounded shadow transform transition duration-300 hover:scale-105 opacity-0 animate-fadeUp`}
+              className={`h-36 object-cover w-full rounded shadow transform transition duration-300 hover:scale-105 animate-fadeUp`}
               style={{ animationDelay: `${i * 100}ms`, animationFillMode: "forwards" }}
             />
           ))}

@@ -1,6 +1,15 @@
 import ProductCard from "./ProductCard";
+import { v4 as uuidv4 } from 'uuid';
 
-const products = [
+type Product = {
+  id: string;
+  name: string;
+  image: string;
+  price: number;
+  oldPrice?: number;
+};
+
+const products: Product[] = [
   {
     name: "Corona classic chair",
     image: "/src/assets/images/chair1.jpg",
@@ -42,7 +51,10 @@ const products = [
     image: "/src/assets/images/chair8.webp",
     price: 24.0,
   },
-];
+].map(product => ({
+  ...product,
+  id: uuidv4() 
+}));
 
 const ProductGrid = () => {
   return (
@@ -57,8 +69,11 @@ const ProductGrid = () => {
           <div className="flex-1 h-px bg-orange max-w-[100px]" />
         </div>
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {products.map((product, idx) => (
-            <ProductCard key={idx} {...product} />
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              {...product}
+            />
           ))}
         </div>
         <div className="flex justify-center mt-8">
@@ -66,7 +81,8 @@ const ProductGrid = () => {
             className="border-none bg-gradient-to-r from-yellow-700 to-yellow-500 text-white px-6 py-3 rounded shadow-md w-max
                transition-all duration-300 ease-in-out
                hover:from-yellow-800 hover:to-yellow-600 hover:text-white cursor-pointer
-               focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">
+               focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
+          >
             View All Products
           </button>
         </div>
