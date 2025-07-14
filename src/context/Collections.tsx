@@ -35,6 +35,7 @@ import st5 from "../assets/side-table/st5.png"
 import sofa1 from "../assets/sofa/sofa1.png"
 import sofa2 from "../assets/sofa/sofa2.png"
 import tv1 from "../assets/tv-cabinet/tv1.jpg"
+import Footer from "../components/Footer";
 
 
 const allProducts: Record<string, {
@@ -284,6 +285,7 @@ const Collection = () => {
       ) : (
         <p className="text-gray-500">No products found in this category.</p>
       )}
+      <Footer/>
     </div>
   );
 };
