@@ -69,6 +69,22 @@ const ProductCard = ({ name, image, price, oldPrice, id }: ProductCardProps) => 
             alt={name}
             className="h-full w-auto object-contain transition duration-300 group-hover:opacity-50"
           />
+          <div className="flex justify-center gap-2 absolute inset-x-0 mx-auto opacity-0 group-hover:opacity-100 transition duration-300">
+          <button
+            onClick={handleAddToCart}
+            className="bg-accent text-white px-4 py-2 rounded-lg shadow-lg border-none outline-none"
+          >
+            Add to Cart
+          </button>
+          <button 
+            onClick={handleViewInSpace}
+            disabled={isPreviewLoading}
+            className="bg-brand text-white px-4 py-2 rounded-lg shadow-lg border-none disabled:opacity-50"
+          >
+            {isPreviewLoading ? 'Generating...' : 'View in Space'}
+          </button>
+        </div>
+      </div>
           {/* Preview Modal */}
           {previewImage && (
             <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
@@ -92,22 +108,7 @@ const ProductCard = ({ name, image, price, oldPrice, id }: ProductCardProps) => 
         </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-center gap-2 absolute inset-x-0 mx-auto opacity-0 group-hover:opacity-100 transition duration-300">
-          <button
-            onClick={handleAddToCart}
-            className="bg-accent text-white px-4 py-2 rounded-lg shadow-md"
-          >
-            Add to Cart
-          </button>
-          <button 
-            onClick={handleViewInSpace}
-            disabled={isPreviewLoading}
-            className="bg-brand text-white px-4 py-2 rounded-lg shadow-md disabled:opacity-50"
-          >
-            {isPreviewLoading ? 'Generating...' : 'View in Space'}
-          </button>
-        </div>
-      </div>
+        
 
       {/* Product Info */}
       <h3 className="text-base font-semibold text-dark truncate mt-4 font-heading">
