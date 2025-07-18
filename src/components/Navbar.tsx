@@ -74,19 +74,19 @@ const Navbar = () => {
 
     return (
         <>
-            <header className="bg-[#f5f1ed] shadow-md sticky top-0 z-50">
-                <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative">
+            <header className="bg-[#f5f1ed] shadow-md sticky z-50">
+                <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center relative">
                     {/* Logo */}
                     <Link to="/" className="text-2xl font-bold text-dark tracking-wide">
                         R<span className="text-brand">I</span> Furnish.
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden md:flex gap-6 relative z-50 justify-center">
+                    <nav className="hidden md:flex gap-10 relative z-50 justify-center">
                         {["Home", "Furniture", "Lighting", "Decor", "Raw Wood", "Contact"].map((item, idx) => (
                             <div
                                 key={idx}
-                                className="relative"
+                                className="relative group"
                                 ref={item === "Furniture" ? navItemRef : null}
                                 onMouseEnter={() => item === "Furniture" && setActiveDropdown(item)}
                                 onMouseLeave={() => item === "Furniture" && setTimeout(() => {
@@ -104,10 +104,12 @@ const Navbar = () => {
                                                     ? "#"
                                                     : `/collection/${item.toLowerCase().replace(/\s+/g, "-")}`
                                         }
-                                        className="text-dark text-[16px] font-medium no-underline hover:text-brand transition duration-300"
+                                        className="relative text-dark text-md font-medium no-underline hover:text-brand transition-colors duration-300"
                                         onClick={() => handleDesktopClick(item)}
                                     >
                                         {item}
+
+                                        <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-brand transition-all duration-300 group-hover:w-full"></span>
                                     </Link>
                                 </div>
                             </div>
@@ -115,7 +117,7 @@ const Navbar = () => {
                     </nav>
 
                     {/* Icons */}
-                    <div className="flex items-center gap-4 text-dark text-xl">
+                    <div className="flex items-center gap-4 text-dark text-md">
                         <FaUser className="cursor-pointer hover:text-accent transition duration-200" />
                         <FaHeart className="cursor-pointer hover:text-accent transition duration-200" />
                         <FaShoppingCart
@@ -182,7 +184,7 @@ const Navbar = () => {
                     <div className="md:hidden px-4 pb-4">
                         {["Home", "Furniture", "Lighting", "Decor", "Raw Wood", "Contact"].map((item, idx) => (
                             <div key={idx}>
-                                <div 
+                                <div
                                     className="flex items-center justify-between py-2"
                                     onClick={() => {
                                         if (item === "Furniture") {
@@ -201,12 +203,12 @@ const Navbar = () => {
                                                     : `/collection/${item.toLowerCase().replace(/\s+/g, "-")}`
                                         }
                                         className="text-dark text-base font-medium hover:text-brand transition"
-                                       
+
                                     >
                                         {item}
                                     </Link>
                                 </div>
-                                
+
                                 {item === "Furniture" && mobileDropdown === "Furniture" && (
                                     <div className="ml-4 mt-2 mb-4">
                                         {categories.map((category, catIdx) => (

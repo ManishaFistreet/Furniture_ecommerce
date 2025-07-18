@@ -46,9 +46,13 @@ module.exports = {
         '2xl': "1.5rem",
       },
       fontSize: {
-        '2xs': '0.625rem', // Example font size
-        '3xs': '0.5rem', // Example font size
-        '4xs': '0.375rem', // Example font size
+        '2xs': '0.625rem',
+        '3xs': '0.5rem', 
+        '4xs': '0.375rem',
+        'xs': '1rem',
+        'md': '1.2rem',
+        'lg': '1.4rem',
+        'xl' : '1.8rem',
       },
       spacing: {
         '72': '18rem', // Example spacing         

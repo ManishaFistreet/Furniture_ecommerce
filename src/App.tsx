@@ -1,5 +1,5 @@
 // src/App.tsx
-import {Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Heroslider";
@@ -31,8 +31,8 @@ const App = () => {
         <Route path="/collection/:name" element={<Collection />} />
       </Routes>
       <Footer />
-      </>
-    
+    </>
+
   );
 };
 
