@@ -1,7 +1,7 @@
 import ProductCard from "./ProductCard";
 import { v4 as uuidv4 } from 'uuid';
 
-type Product = {
+export type Product = {
   id: string;
   name: string;
   image: string;
@@ -9,7 +9,7 @@ type Product = {
   oldPrice?: number;
 };
 
-const products: Product[] = [
+export const products: Product[] = [
   {
     name: "Corona classic chair",
     image: "/src/assets/images/chair1.jpg",
