@@ -44,7 +44,7 @@ import { FiFilter, FiSearch } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 
 // --- Types ---
-interface Product {
+export interface Product {
   id: string;
   name: string;
   image: string;
@@ -64,7 +64,7 @@ const withIds = (items: Omit<Product, "id">[]): Product[] =>
   }));
 
 // --- Product Catalog ---
-const allProducts: Record<string, Product[]> = {
+export const allProducts: Record<string, Product[]> = {
   "book-shelves": withIds([
     { name: "Modern Book Shelf", image: modern, price: 4999, category: "bookshelf" },
     { name: "Wooden Book Rack", image: wooden, price: 3499, category: "bookshelf" },
